@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # Author: DelusionaL
-# Team: Coding Clubhouse
+# Team: Nebuda
 
 import sys
 
@@ -48,8 +48,8 @@ def eve():
 			out.append(ar)
 			count_del += 1
 		t3_count -= 1
-	# sampling for 4 persons teams
 
+	# sampling for 4 persons teams
 	while pc >= 0 and t4_count > 0:
 		ar = [4]
 		i = 4
@@ -66,11 +66,12 @@ def eve():
 	for i in range(len(out)):
 		print(" ".join(map(str, out[i])))
 
-filenames = ['a_example','b_little_bit_of_everything', 'c_many_ingredients', 'd_many_pizzas', 'e_many_teams']
+if __name__ == "__main__":
+	filenames = ['a_example','b_little_bit_of_everything', 'c_many_ingredients', 'd_many_pizzas', 'e_many_teams']
 
-for name in filenames:
-	##- For taking input and out from file -##
-	sys.stdin = open(f"{name}.in", 'r')
-	sys.stdout = open(f"{name}.out", 'w')
-	##########################################
-	eve()
+	for name in filenames:
+		##- For taking input and out from file -##
+		sys.stdin = open(f"{name}.in", 'r')
+		sys.stdout = open(f"{name}.out", 'w')
+		##########################################
+		eve()
